@@ -4,7 +4,6 @@ import styles from "../styles/BlogPost.module.css";
 import moment from "moment";
 
 function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
-  //   console.log({ author });
   return (
     <Link href={"/posts/" + slug}>
       <div className={styles.card}>

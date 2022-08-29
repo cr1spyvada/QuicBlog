@@ -36,7 +36,6 @@ const QUERY = gql`
 
 export async function getStaticProps() {
   const { posts } = await graphcms.request(QUERY);
-  console.log(posts[0].author);
   return {
     props: {
       posts,
