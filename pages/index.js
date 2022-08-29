@@ -3,9 +3,7 @@ import styles from "../styles/Home.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 import BlogPost from "../components/BlogPost";
 
-const graphcms = new GraphQLClient(
-  "https://api-ap-south-1.hygraph.com/v2/cl7a8orph2jiv01ufgpy5ebf6/master"
-);
+const graphcms = new GraphQLClient(process.env.GRAPH_CONTENT_API_ENDPOINT);
 
 const QUERY = gql`
   {

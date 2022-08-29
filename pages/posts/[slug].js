@@ -4,9 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import moment from "moment";
 
-const graphcms = new GraphQLClient(
-  "https://api-ap-south-1.hygraph.com/v2/cl7a8orph2jiv01ufgpy5ebf6/master"
-);
+const graphcms = new GraphQLClient(process.env.GRAPH_CONTENT_API_ENDPOINT);
 
 const QUERY = gql`
   query Post($slug: String!) {
