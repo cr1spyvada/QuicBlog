@@ -1,0 +1,67 @@
+.card {
+  cursor: pointer;
+  margin-top: 5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 30vw;
+  box-shadow: 15px 20px 40px rgba(216, 211, 211, 0.4);
+}
+.card h2 {
+  padding: 0.5rem 0rem;
+}
+.card h3 {
+  font-size: 1rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+}
+.avatar {
+  position: relative;
+  width: 5vh;
+  height: 5vh;
+}
+.card:hover > .imgContainer {
+  opacity: 0.8;
+}
+
+.card img {
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin: 0.5rem 0rem;
+}
+
+.text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.author img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 0rem 2rem;
+  }
+}

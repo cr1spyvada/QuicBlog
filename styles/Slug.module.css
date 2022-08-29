@@ -1,0 +1,67 @@
+.blog {
+  width: 75vw;
+  margin: 20vh auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0rem 0rem 2rem 0.5rem rgba(4, 4, 4, 0.1);
+}
+.goBackBtn {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  margin: 1em;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: black;
+  font-size: large;
+  box-shadow: 0rem 0rem 2rem 0.5rem rgba(4, 4, 4, 0.15);
+}
+.coverPhoto {
+  position: relative;
+  margin: 0 auto;
+  min-width: 50%;
+  max-width: 100%;
+  height: 25vh;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+}
+
+.title {
+  font-size: large;
+  padding: 1rem;
+}
+
+.authorDetails {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.authorHeader {
+  /* border: 1px solid red; */
+  display: flex;
+  padding: 0.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.date {
+}
+
+.thumbnail {
+  position: relative;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  padding: 1rem;
+  overflow-wrap: break-word;
+}
