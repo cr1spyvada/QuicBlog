@@ -68,7 +68,7 @@ export default function BlogPost({ post }) {
       </Head>
       <main className={styles.blog}>
         <button onClick={() => router.back()} className={styles.goBackBtn}>
-          Go Back
+          {"<"}
         </button>
         <div className={styles.coverPhoto}>
           <Image layout="fill" src={post.coverPhoto.url} alt={post.title} />

@@ -19,11 +19,12 @@
   top: 0;
   left: 0;
   margin: 1em;
-  border-radius: 1rem;
-  overflow: hidden;
+  padding: 0 0.5rem 0 0.4rem;
+  border-radius: 50%;
+  // overflow: hidden;
   background-color: black;
-  font-size: large;
-  box-shadow: 0rem 0rem 2rem 0.5rem rgba(4, 4, 4, 0.15);
+  font-size: xx-large;
+  // box-shadow: 0rem 0rem 2rem 0.5rem rgba(4, 4, 4, 0.15);
 }
 .coverPhoto {
   position: relative;
