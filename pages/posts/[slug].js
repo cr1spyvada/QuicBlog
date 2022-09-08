@@ -3,6 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import moment from "moment";
+import Head from "next/head";
 
 const graphcms = new GraphQLClient(process.env.GRAPH_CONTENT_API_ENDPOINT);
 
@@ -61,38 +62,43 @@ export async function getStaticProps({ params }) {
 export default function BlogPost({ post }) {
   const router = useRouter();
   return (
-    <main className={styles.blog}>
-      <button onClick={() => router.back()} className={styles.goBackBtn}>
-        Go Back
-      </button>
-      <div className={styles.coverPhoto}>
-        <Image layout="fill" src={post.coverPhoto.url} alt={post.title} />
-      </div>
-      <div className={styles.title}>
-        <div className={styles.authorDetails}>
-          <div className={styles.thumbnail}>
-            <Image
-              layout="fill"
-              src={post.author.avatar.url}
-              alt={post.author.name}
-            />
-          </div>
-          <div className={styles.authorHeader}>
-            <div className={styles.date}>
-              By <span style={{ fontWeight: "500" }}>{post.author.name}</span>
-            </div>
-            <div className={styles.date}>
-              {moment(post.datePublished).format("MMMM d, YYYY")}
-            </div>
-          </div>
+    <>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
+      <main className={styles.blog}>
+        <button onClick={() => router.back()} className={styles.goBackBtn}>
+          Go Back
+        </button>
+        <div className={styles.coverPhoto}>
+          <Image layout="fill" src={post.coverPhoto.url} alt={post.title} />
         </div>
-        <h2>{post.title}</h2>
-      </div>
+        <div className={styles.title}>
+          <div className={styles.authorDetails}>
+            <div className={styles.thumbnail}>
+              <Image
+                layout="fill"
+                src={post.author.avatar.url}
+                alt={post.author.name}
+              />
+            </div>
+            <div className={styles.authorHeader}>
+              <div className={styles.date}>
+                By <span style={{ fontWeight: "500" }}>{post.author.name}</span>
+              </div>
+              <div className={styles.date}>
+                {moment(post.datePublished).format("MMMM d, YYYY")}
+              </div>
+            </div>
+          </div>
+          <h2>{post.title}</h2>
+        </div>
 
-      <div
-        className={styles.content}
-        dangerouslySetInnerHTML={{ __html: post.content.html }}
-      ></div>
-    </main>
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: post.content.html }}
+        ></div>
+      </main>
+    </>
   );
 }
