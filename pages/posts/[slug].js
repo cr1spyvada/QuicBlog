@@ -1,4 +1,4 @@
-import styles from "../../styles/Slug.module.css";
+import styles from "../../styles/Slug.module.scss";
 import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -68,7 +68,7 @@ export default function BlogPost({ post }) {
       </Head>
       <main className={styles.blog}>
         <button onClick={() => router.back()} className={styles.goBackBtn}>
-          Go Back
+          {"<"}
         </button>
         <div className={styles.coverPhoto}>
           <Image layout="fill" src={post.coverPhoto.url} alt={post.title} />

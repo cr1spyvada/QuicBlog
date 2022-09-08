@@ -1,3 +1,4 @@
+@import "utilities";
 .card {
   cursor: pointer;
   margin-top: 5rem;
@@ -5,6 +6,12 @@
   overflow: hidden;
   width: 30vw;
   box-shadow: 15px 20px 40px rgba(216, 211, 211, 0.4);
+  @media screen and (max-width: $lg) {
+    width: 65vw;
+  }
+  @media screen and (max-width: $sm) {
+    width: 90vw;
+  }
 }
 .card h2 {
   padding: 0.5rem 0rem;
@@ -60,8 +67,8 @@
   margin-right: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    margin: 0rem 2rem;
-  }
-}
+// @media screen and (max-width: $md) {
+//   .card {
+//     margin: 0rem 2rem;
+//   }
+// }
