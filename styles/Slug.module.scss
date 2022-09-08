@@ -1,9 +1,17 @@
+@import "utilities";
+
 .blog {
   width: 75vw;
   margin: 20vh auto;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0rem 0rem 2rem 0.5rem rgba(4, 4, 4, 0.1);
+  @media screen and (max-width: $lg) {
+    width: 85vw;
+  }
+  @media screen and (max-width: $sm) {
+    width: 90vw;
+  }
 }
 .goBackBtn {
   position: absolute;

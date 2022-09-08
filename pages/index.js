@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import { GraphQLClient, gql } from "graphql-request";
 import BlogPost from "../components/BlogPost";
 
