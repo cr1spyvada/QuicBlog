@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import moment from "moment";
 import Head from "next/head";
+import { IoCaretBack, IoLogoGithub } from "react-icons/io5";
+import { TbLetterV } from "react-icons/tb";
 
 const graphcms = new GraphQLClient(process.env.GRAPH_CONTENT_API_ENDPOINT);
 
@@ -67,9 +69,19 @@ export default function BlogPost({ post }) {
         <title>{post.title}</title>
       </Head>
       <main className={styles.blog}>
-        <button onClick={() => router.back()} className={styles.goBackBtn}>
-          {"<"}
-        </button>
+        <div className={styles.toolBar}>
+          <IoCaretBack
+            size="3em"
+            onClick={() => router.back()}
+            className={styles.btn}
+          />
+          <a href="https://github.com/cr1spyvada/QuicBlog">
+            <IoLogoGithub size="2.5em" className={styles.btn} />
+          </a>
+          <a href="https://vaisakhnp.vercel.app">
+            <TbLetterV size="2.5em" className={styles.btn} />
+          </a>
+        </div>
         <div className={styles.coverPhoto}>
           <Image layout="fill" src={post.coverPhoto.url} alt={post.title} />
         </div>
