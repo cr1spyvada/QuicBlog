@@ -13,19 +13,45 @@
     width: 90vw;
   }
 }
-.goBackBtn {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  margin: 1em;
-  padding: 0 0.5rem 0 0.4rem;
-  border-radius: 50%;
-  // overflow: hidden;
-  background-color: black;
-  font-size: xx-large;
-  // box-shadow: 0rem 0rem 2rem 0.5rem rgba(4, 4, 4, 0.15);
+.btn {
+  color: white;
 }
+.btn:hover {
+  color: rgb(0, 162, 255);
+  cursor: grab;
+}
+.toolBar {
+  position: fixed;
+  right: 0;
+  bottom: 2rem;
+  background-color: black;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  margin-right: 1rem;
+  @media screen and (max-width: $lg) {
+    padding: 0.25rem;
+    .btn {
+      font-size: 0.75rem;
+    }
+  }
+  @media screen and (max-width: $sm) {
+    bottom: 0;
+    flex-direction: row;
+    padding: 0.5rem;
+    width: 90vw;
+    margin-right: 5vw;
+    justify-content: space-evenly;
+    .btn {
+      font-size: 0.8rem;
+    }
+  }
+}
+
 .coverPhoto {
   position: relative;
   margin: 0 auto;
